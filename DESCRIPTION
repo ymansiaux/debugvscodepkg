@@ -1,0 +1,12 @@
+Package: epidemiofuns
+Title: Epidemio functions to present debbuging functions
+Version: 0.0.0.9000
+Authors@R: 
+    person("Yohann", "Mansiaux", , "y.mansiaux@epiconcept.fr", role = c("aut", "cre"))
+Description: What the package does (one paragraph).
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
+Imports: 
+    dplyr
