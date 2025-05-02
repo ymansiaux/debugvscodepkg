@@ -13,7 +13,8 @@
 #' @param column_cases_unexposed Name of the column containing the number of cases in the unexposed group. Default is "cases_unexposed".
 #' @param column_total_unexposed Name of the column containing the total number of individuals in the unexposed group. Default is "total_unexposed".
 #' @return A data frame with an additional column for relative risk (RR).
-#'
+#' @export
+#' @examples calculate_rr_in_df(df = toy_dataset)
 #' @importFrom dplyr %>% mutate
 calculate_rr_in_df <- function(
     df,
@@ -23,7 +24,7 @@ calculate_rr_in_df <- function(
     column_total_unexposed = "total_unexposed") {
   risk1 <- compute_risk(df[, column_cases_exposed], df[, column_total_exposed])
   risk2 <- compute_risk(df[, column_cases_unexposed], df[, column_total_unexposed])
-  df %>%
+  df <- df %>%
     mutate(
       rr = risk1 / risk2
     )

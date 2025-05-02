@@ -35,3 +35,6 @@ A data frame with an additional column for relative risk (RR).
 \description{
 This function calculates the relative risk (RR) from a data frame containing counts of cases and total individuals in both exposed and unexposed groups.
 }
+\examples{
+calculate_rr_in_df(df = toy_dataset)
+}
